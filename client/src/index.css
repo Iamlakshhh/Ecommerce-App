@@ -88,3 +88,9 @@ font-family: 'Playfair Display', serif; */
   align-items: center;
   justify-content: center;
 }
+/*==============================================*/
+.product-link{
+  text-decoration: none;
+  color: black !important;
+
+}
