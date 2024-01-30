@@ -73,7 +73,7 @@ const CreateProduct = () => {
             <h1>Create Product</h1>
             <div className="m-1 w-75">
               <Select
-                bordered={false}
+                variant={false}
                 placeholder="Select a category"
                 size="large"
                 showSearch
@@ -82,7 +82,7 @@ const CreateProduct = () => {
                   setCategory(value);
                 }}
               >
-                {categories?.map((c) => (
+                {categories?.map((c) => ( 
                   <Option key={c._id} value={c._id}>
                     {c.name}
                   </Option>
