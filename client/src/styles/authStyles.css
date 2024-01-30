@@ -43,3 +43,12 @@
     background: -webkit-linear-gradient(to right, #434343,#000000);
     background: linear-gradient(to right, #434343,#000000);
 }
+
+.forgot-btn {
+    background-color: #434343a4 !important;
+    border: 0 !important;
+  }
+  
+  .forgot-btn:hover {
+    color: white !important;
+  }

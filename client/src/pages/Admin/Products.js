@@ -24,7 +24,7 @@ const Products = () => {
   }, []);
   return (
     <Layout>
-      <div className="row">
+      <div className="row dashboard">
         <div className="col-md-3">
           <AdminMenu />
         </div>
@@ -45,7 +45,6 @@ const Products = () => {
                   />
                   <div className="card-body">
                     <h5 className="card-title">{p.name}</h5>
-                    <h5 className="card-text">$ {p.price}</h5>
                     <p className="card-text">{p.description}</p>
                   </div>
                 </div>

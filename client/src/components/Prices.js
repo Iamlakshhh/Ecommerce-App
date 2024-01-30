@@ -24,4 +24,4 @@ export const Prices = [
         name:"$121 or more",
         array:[121,99999] 
     },
-]
+];

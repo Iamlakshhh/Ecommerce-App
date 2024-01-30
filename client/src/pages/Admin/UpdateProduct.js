@@ -19,7 +19,7 @@ const UpdateProduct = () => {
   const [shipping, setShipping] = useState("");
   const [photo, setPhoto] = useState("");
   const [id, setId] = useState("");
- 
+
   //get single product
   const getSingleProduct = async () => {
     try {
@@ -51,7 +51,7 @@ const UpdateProduct = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong in getting catgeory");
+      toast.error("Something wwent wrong in getting catgeory");
     }
   };
 
@@ -112,7 +112,7 @@ const UpdateProduct = () => {
             <h1>Update Product</h1>
             <div className="m-1 w-75">
               <Select
-                variant={false}
+                bordered={false}
                 placeholder="Select a category"
                 size="large"
                 showSearch
@@ -200,7 +200,7 @@ const UpdateProduct = () => {
               </div>
               <div className="mb-3">
                 <Select
-                  variant={false}
+                  bordered={false}
                   placeholder="Select Shipping "
                   size="large"
                   showSearch
@@ -214,13 +214,13 @@ const UpdateProduct = () => {
                   <Option value="1">Yes</Option>
                 </Select>
               </div>
-              <div className="mb-3 text-center">
-                <button className="btn btn-primary w-50 " onClick={handleUpdate}>
+              <div className="mb-3">
+                <button className="btn btn-primary" onClick={handleUpdate}>
                   UPDATE PRODUCT
                 </button>
               </div>
-              <div className="mb-3 text-center">
-                <button className="btn btn-danger w-50 " onClick={handleDelete}>
+              <div className="mb-3">
+                <button className="btn btn-danger" onClick={handleDelete}>
                   DELETE PRODUCT
                 </button>
               </div>

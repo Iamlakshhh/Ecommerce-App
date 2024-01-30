@@ -1,13 +1,15 @@
 import express from "express";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
-import { createProductController, 
+import { brainTreePaymentController, braintreeTokenController, createProductController, 
             deleteProductController, 
             getProductController, 
             getSingleProductController,
+            productCategoryController,
             productCountController,
             productFilterController,
             productListController,
             productPhotoController,
+            relatedProductController,
             searchProductConroller,
             updateProductController
         } from "../controllers/porductController.js";
@@ -59,6 +61,17 @@ router.get('/product-list/:page',productListController);
 //search Product
 router.get('/search/:keyword',searchProductConroller);
 
+//Similiar product 
+router.get('/related-product/:pid/:cid',relatedProductController);
 
+//category wise product
+router.get("/product-category/:slug", productCategoryController);
+
+//payments routes
+//token
+router.get("/braintree/token", braintreeTokenController);
+
+//payments
+router.post("/braintree/payment", requireSignIn, brainTreePaymentController);
 
 export default router;
